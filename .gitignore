@@ -41,7 +41,7 @@ dist/
 *.sqlite3
 
 # Text files
-*.txt
+# *.txt
 
 # Demo and test files
 demo/
