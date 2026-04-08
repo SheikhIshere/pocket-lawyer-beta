@@ -8,9 +8,10 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 3002,
       host: '0.0.0.0',
+      allowedHosts: ["legal.nutcrackers.site"],
       proxy: {
         '/v1/api': {
-          target: 'http://backend:8002',
+          target: 'http://backend:8012',
           changeOrigin: true,
           secure: false,
         }
