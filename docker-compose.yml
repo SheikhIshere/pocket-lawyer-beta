@@ -16,14 +16,13 @@ services:
   # main backend
   backend:
     working_dir: /backend
-    
+
     build:
       context: .
     ports:
       - 8012:8012
     volumes:
-      - ./backend:/backend
-      - /backend/temp
+      - backend_temp:/backend/temp
     command: >
       sh -c "python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8012"
@@ -92,3 +91,4 @@ services:
 
 volumes:
   db-data:
+  backend_temp:
