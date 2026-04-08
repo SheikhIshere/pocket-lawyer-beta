@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile.frontend
     ports:
-      - 3012:3012
+      - 3012:3002
     command: npm run dev -- --host 0.0.0.0
     environment:
       - VITE_API_URL=https://api.legal.nutcrackers.site
