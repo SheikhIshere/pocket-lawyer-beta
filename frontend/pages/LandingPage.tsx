@@ -192,23 +192,22 @@ const LandingPage: React.FC = () => {
                 <div className="relative bg-white dark:bg-slate-800 rounded-3xl shadow-2xl shadow-gray-200/50 dark:shadow-none border border-gray-100 dark:border-slate-700 overflow-hidden">
                   {/* Chat Header */}
                   <div className="bg-gradient-to-r from-gray-900 to-gray-800 p-6">
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4">
-                        <div className="relative">
-                          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#0E8E82] to-[#0a6d62] flex items-center justify-center shadow-lg">
-                            <Scale className="w-6 h-6 text-white" />
+                    <div className="flex items-start sm:items-center justify-between gap-2">
+                      <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+                        <div className="relative shrink-0">
+                          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-[#0E8E82] to-[#0a6d62] flex items-center justify-center shadow-lg">
+                            <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                           </div>
-                          {/* <div className="absolute -bottom-1 -right-1 w-5 h-5 bg-[#0E8E82] rounded-full border-2 border-white"></div> */}
                         </div>
-                        <div>
-                          <div className="font-semibold text-white">PocketLawyer AI</div>
-                          <div className="text-sm text-[#0E8E82]/80 dark:text-teal-400/80 flex items-center gap-2">
-                            <div className="w-2 h-2 rounded-full bg-[#0E8E82] dark:bg-teal-400 animate-pulse"></div>
-                            Online • Enterprise Edition
+                        <div className="min-w-0">
+                          <div className="font-semibold text-white text-sm sm:text-base truncate">PocketLawyer AI</div>
+                          <div className="text-xs sm:text-sm text-[#0E8E82]/80 dark:text-teal-400/80 flex items-center gap-2 truncate">
+                            <div className="w-2 h-2 rounded-full bg-[#0E8E82] dark:bg-teal-400 animate-pulse shrink-0"></div>
+                            <span className="truncate">Online • Enterprise Edition</span>
                           </div>
                         </div>
                       </div>
-                      <div className="text-xs font-medium px-3 py-1.5 rounded-full bg-gray-700 dark:bg-slate-700 text-gray-200">
+                      <div className="text-[10px] sm:text-xs font-medium px-2 py-1 sm:px-3 sm:py-1.5 rounded-full bg-gray-700 dark:bg-slate-700 text-gray-200 shrink-0">
                         Attorney Mode
                       </div>
                     </div>
@@ -293,16 +292,16 @@ const LandingPage: React.FC = () => {
 
                   {/* Chat Input */}
                   <div className="border-t border-gray-100 dark:border-slate-700 p-4 bg-white dark:bg-slate-800">
-                    <div className="flex items-center gap-3 bg-gray-50 dark:bg-slate-900 rounded-xl px-4 py-3 border border-gray-200 dark:border-slate-700">
+                    <div className="flex items-center gap-3 bg-gray-50 dark:bg-slate-900 rounded-xl px-3 sm:px-4 py-2 sm:py-3 border border-gray-200 dark:border-slate-700">
                       <input
                         type="text"
-                        placeholder="Type your legal question or upload document..."
-                        className="bg-transparent flex-1 outline-none text-sm text-gray-600 dark:text-gray-400 placeholder-gray-400"
+                        placeholder="Type a legal question..."
+                        className="bg-transparent flex-1 min-w-0 outline-none text-sm text-gray-600 dark:text-gray-400 placeholder-gray-400"
                         readOnly
                       />
-                      <button className="flex items-center gap-2 bg-gradient-to-r from-[#0E8E82] to-[#0a6d62] text-white px-4 py-2.5 rounded-lg text-sm font-semibold hover:shadow-lg transition-all">
+                      <button className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#0E8E82] to-[#0a6d62] text-white px-3 sm:px-4 py-2 sm:py-2.5 rounded-lg text-sm font-semibold hover:shadow-lg transition-all shrink-0">
                         <ArrowRight className="w-4 h-4" />
-                        Send
+                        <span className="hidden sm:inline">Send</span>
                       </button>
                     </div>
                   </div>
@@ -456,9 +455,9 @@ const LandingPage: React.FC = () => {
                 <span className="text-teal-700 dark:text-teal-400 font-semibold">Start Your Legal Journey</span>
               </div>
 
-              <h2 className="text-5xl lg:text-6xl font-bold text-slate-800 dark:text-white mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold text-slate-800 dark:text-white mb-6">
                 Get Legal Help in 3 Simple Steps
-                <span className="block text-teal-600 dark:text-teal-400 mt-2">Start Chat • Get Advice • Export PDF</span>
+                <span className="block text-lg sm:text-xl text-teal-600 dark:text-teal-400 mt-2">Start Chat • Get Advice • Export PDF</span>
               </h2>
 
               <p className="text-xl text-slate-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">

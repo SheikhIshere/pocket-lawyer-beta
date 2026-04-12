@@ -199,7 +199,7 @@ export const Header: React.FC<{ setBottomMenuOpen?: (isOpen: boolean) => void }>
         : 'bg-white dark:bg-slate-900 border-b border-gray-100 dark:border-slate-800'
         }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 md:h-18 lg:h-20">
+          <div className="flex justify-between items-center h-16 md:h-18 lg:h-20 flex-nowrap overflow-hidden">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 sm:gap-3 shrink-0 z-10">
               <div className="relative">
@@ -209,7 +209,7 @@ export const Header: React.FC<{ setBottomMenuOpen?: (isOpen: boolean) => void }>
               </div>
               <div>
                 <div className="flex items-center gap-2">
-                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white tracking-tight leading-none block">PocketLawyer</span>
+                  <span className="text-base sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white tracking-tight leading-none block truncate">PocketLawyer</span>
                   <span className="px-2 py-0.5 bg-teal-100 dark:bg-teal-900/40 text-teal-600 dark:text-teal-400 text-[10px] font-black rounded-md border border-teal-200 dark:border-teal-800/50 uppercase tracking-tighter">BETA</span>
                 </div>
                 <span className="hidden sm:block text-[9px] lg:text-[10px] font-medium text-teal-600 dark:text-teal-400 tracking-wider uppercase mt-0.5">
@@ -248,10 +248,10 @@ export const Header: React.FC<{ setBottomMenuOpen?: (isOpen: boolean) => void }>
               <div className="flex items-center gap-3">
                 <Link
                   to="/chat"
-                  className="px-8 py-3 bg-[#0E8E82] text-white rounded-xl font-bold hover:shadow-lg hover:shadow-teal-500/20 active:scale-95 transition-all flex items-center gap-2"
+                  className="px-4 sm:px-8 py-2.5 sm:py-3 bg-[#0E8E82] text-white rounded-xl font-bold hover:shadow-lg hover:shadow-teal-500/20 active:scale-95 transition-all flex items-center justify-center gap-2 shrink-0"
                 >
                   <MessageSquare className="w-4 h-4" strokeWidth={2.5} />
-                  Start Chatting
+                  <span className="hidden sm:inline">Start Chatting</span>
                 </Link>
               </div>
             </div>
